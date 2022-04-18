@@ -12,10 +12,10 @@ const Property = ({property})=>{
   const {coverPhoto, price, rentFrequency,rooms,title,baths,area, agency,isVerified, externalID} = property;
 
   return(
-    <Link href={`/property/${externalID}`} passHref>
+    <Link href={`/Property/${externalID}`} passHref>
     <Flex flexWrap="wrap" w="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
       <Box>
-      <img Width="400" height="260" src={coverPhoto ? coverPhoto?.url : defaultImg} alt="Property"/>
+      <Image width={400} height={260} src={coverPhoto ? coverPhoto?.url : defaultImg} alt="Property" placeholder="blur" blurDataURL={coverPhoto?.url}/>
       </Box>
       <Box w="full">
         <Flex paddingTop="2" alignItems='center' justifyContent='space-between'>

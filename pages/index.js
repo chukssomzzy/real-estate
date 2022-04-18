@@ -48,7 +48,7 @@ const Home = ({propertiesForSale,propertiesForRent}) => {
       <Flex flexWrap="wrap">
   {
     /*--fetch the rent property and map over them*/
-    propertiesForRent.map(property => <Property key={property.id} property={property}/>)
+    propertiesForRent?.map(property => <Property key={property.id} property={property}/>)
 
   }
       </Flex>
